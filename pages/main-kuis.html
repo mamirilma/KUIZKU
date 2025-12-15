@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mainkan Kuis</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+
+        .kuis-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .kuis-1-img img {
+            width: 260px;
+            height: 160px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.15s;
+        }
+
+        .kuis-1-img img:hover {
+            color: grey;
+            opacity: 60%;
+        }
+
+        .kuis-1-judul {
+            color: white;
+            margin-top: 3px;
+            cursor: pointer;
+        }
+
+        .kuis-1-judul:hover {
+            text-decoration: underline;
+        }
+
+        .kuis-1-admin {
+            color: grey;
+            cursor: pointer;
+        }
+
+        .kuis-1-admin:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <img  class="bg-body" src="../asset/bg-body.png" alt="">
+    <nav class="nav-index">
+        <a class="nav-isi" href="index.html">KUIZKU</a>
+    </nav>
+
+    <a href="/data/soalmatimatika.json">
+        <div class="kuis-container" id="quizContainer">
+        <div class="card-kuis-1">
+            <div class="kuis-1-img">
+                <img src="../asset/matematika.webp" alt="">
+            </div>
+            <h3 class="kuis-1-judul">Matematika Dasar</h3>
+            <p class="kuis-1-admin">by Revinci.dev</p>
+        </div>
+    </div>
+    </a>
+
+    <h2 id="question"></h2>
+    <div id="options"></div>
+
+    <script src="../javascript/index.js"></script>
+    <script src="../javascript/data.js"></script>
+</body>
+</html>

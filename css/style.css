@@ -1,0 +1,119 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: black;
+            --secondary-color: #ffffff;
+            --third-color: #757575;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .bg-body {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            inset: 0;
+            z-index: -1;
+        }
+
+        .nav-index {
+            position: relative;
+            padding: 30px 30px;
+            z-index: 1;
+        }
+
+        .nav-isi {
+            font-size: 30px;
+            font-weight: bold;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .header {
+            position: relative;
+            text-align: center;
+            margin: 50px 0;
+            font-size: 2rem;
+            z-index: 1;
+        }
+
+        .header p {
+            color: var(--third-color);
+            font-weight: bold;
+        }
+
+        .btn-group {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 100px;
+            margin-
+            z-index: 1;
+        }
+
+        .a-index {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        .btn {
+            display: flex;
+            position: relative;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            justify-content: space-between;
+            border: none;
+            padding: 0;
+            width: 300px;
+            height: 100px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease;
+            box-shadow: 0 8px 0 #494949;
+            z-index: 1;
+        }
+
+        .btn:hover {
+            background-color: rgb(194, 194, 194);
+            transform: translateY(4px);
+            box-shadow: 0 3px 0 #494949;
+        }
+
+        .btn-text {
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-left: 20px;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        .btn-arrow {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 55px;
+            margin-right: 15px;
+        }
+
+        .planet-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+
+
+
+        
