@@ -16,6 +16,7 @@
             color: var(--secondary-color);
         }
 
+        /* main style */
         .bg-body {
             position: fixed;
             top: 0;
@@ -40,6 +41,7 @@
             text-decoration: none;
         }
 
+        /* index style */
         .header {
             position: relative;
             text-align: center;
@@ -48,18 +50,13 @@
             z-index: 1;
         }
 
-        .header p {
-            color: var(--third-color);
-            font-weight: bold;
-        }
-
         .btn-group {
             display: flex;
             position: relative;
             justify-content: center;
             gap: 40px;
             margin-top: 100px;
-            margin-
+            margin-bottom: 100px;
             z-index: 1;
         }
 
@@ -82,14 +79,18 @@
             cursor: pointer;
             border-radius: 10px;
             transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease;
-            box-shadow: 0 8px 0 #494949;
+            box-shadow: 4px 8px 0 #494949;
             z-index: 1;
         }
 
-        .btn:hover {
+        .btn:disabled {
+            cursor: not-allowed;
+        }
+
+        .btn:not(:disabled):active {
             background-color: rgb(194, 194, 194);
-            transform: translateY(4px);
-            box-shadow: 0 3px 0 #494949;
+            transform: translateY(4px) translateX(8px);
+            box-shadow: 1px 2px 0 #494949;
         }
 
         .btn-text {
@@ -110,10 +111,396 @@
 
         .planet-group {
             display: flex;
+            position: fixed;
             justify-content: space-between;
+            width: 100%;
+            z-index: 3;
+        }
+
+        .ig-atmin {
+            color: var(--third-color);
+            font-style: italic;
+            text-decoration: none;
+        }
+
+        .ig-atmin:hover {
+            text-decoration: underline;
+        }
+
+        /* main kuis style */
+        .kuis-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .card-kuis-1 {
+            display: inline-block;
+        }
+
+        .kuis-1-img img {
+            width: 260px;
+            height: 160px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+        }
+
+        .kuis-1-img img:hover {
+            box-shadow: 0 0 0 2px white;
+            /* color: grey;
+            opacity: 60%; */
+        }
+
+        .kuis-1-judul {
+            color: white;
+            margin-top: 3px;
+            cursor: pointer;
+        }
+
+        .kuis-1-judul:hover {
+            text-decoration: underline;
+        }
+
+        .kuis-1-admin {
+            color: grey;
+            cursor: pointer;
+        }
+
+        .kuis-1-admin:hover {
+            text-decoration: underline;
+        }
+
+        .popup-matematika {
+            display: none;
+            position: fixed;
+            inset: 0;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.8);
+            z-index: 1;
+        }
+
+        .popup-matematika.aktif {
+            display: flex;
+        }
+
+        .popup-box {
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            border: 1px solid white;
+            width: 70%;
+            max-width: 800px;
+            height: auto;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .popup-box a {
+            width: fit-content;
+        }
+
+        .material-symbols-outlined.icon-back {
+            padding: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 35px;
+            cursor: pointer;
+            transition: 0.15s;
+        }
+
+        .centang {
+            display: none;
+        }
+
+        .centang.benar {
+            display: inline-flex;
+        }
+
+        .material-symbols-outlined:hover {
+            background-color: rgb(64, 64, 64);
+            border-radius: 4px;
+        }
+
+        .divPopup1 {
+            gap: 10px;
+        }
+
+        .judul-matematika {
+            display: inline-block;
+            position: relative;
+            bottom: 30px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .info-kuis-matematika {
+            display: flex;
+            margin-left: 330px;
+            gap: 4px;
+        }
+
+        .admin-name-info {
+            position: relative;
+            font-weight: bold;
+            right: 110px;
+            color: white;
+        }
+
+        .info-kuis-matematika .material-symbols-outlined {
+            font-size: 25px;
+            font-weight: 100;
+        }
+
+        .btnMulaiKuis {
+            display: flex;
+            position: relative;
+            font-weight: bold;
+            top: 10px;
+            background-color: white;
+            border-style: none;
+            margin: auto;
+            margin-bottom: 20px;
+            padding: 10px 120px;
+            border-radius: 4px;
+            box-shadow: 3px 6px 0 #494949;
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease;
+        }
+
+        .btnMulaiKuis:active {
+            background-color: rgb(194, 194, 194);
+            transform: translateY(3px) translateX(6px);
+            box-shadow: 1px 3px 0 #494949;
+        }
+
+        .popup-matematika-soal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.8);
+            z-index: 1;
         }
         
+        .popup-matematika-soal.aktif {
+            display: flex;
+        }
 
+        .popup-matematika-soal-2 {
+            display: none;
+            position: fixed;
+            inset: 0;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.8);
+            z-index: 1;
+        }
 
+        .popup-matematika-soal-2.aktif {
+            display: flex;
+        }
 
+        .popup-matematika-soal-3 {
+            display: none;
+            position: fixed;
+            inset: 0;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.8);
+            z-index: 1;
+        }
+
+        .popup-matematika-soal-3.aktif {
+            display: flex;
+        }
+
+        .popup-matematika-soal-4 {
+            display: none;
+            position: fixed;
+            inset: 0;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.8);
+            z-index: 1;
+        }
+
+        .popup-matematika-soal-4.aktif {
+            display: flex;
+        }
+
+        .popup-matematika-soal-5 {
+            display: none;
+            position: fixed;
+            inset: 0;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.8);
+            z-index: 1;
+        }
+
+        .popup-matematika-soal-5.aktif {
+            display: flex;
+        }
+
+        .popup-matematika-soal-6 {
+            display: none;
+            position: fixed;
+            inset: 0;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.8);
+            z-index: 1;
+        }
+
+        .popup-matematika-soal-6.aktif {
+            display: flex;
+        }
+
+        .popup-matematika-soal-7 {
+            display: none;
+            position: fixed;
+            inset: 0;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.8);
+            z-index: 1;
+        }
+
+        .popup-matematika-soal-7.aktif {
+            display: flex;
+        }
+
+        .popup-matematika-soal-8 {
+            display: none;
+            position: fixed;
+            inset: 0;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.8);
+            z-index: 1;
+        }
+
+        .popup-matematika-soal-8.aktif {
+            display: flex;
+        }
+
+        .popup-matematika-soal-9 {
+            display: none;
+            position: fixed;
+            inset: 0;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.8);
+            z-index: 1;
+        }
+
+        .popup-matematika-soal-9.aktif {
+            display: flex;
+        }
+
+        .popup-matematika-soal-10 {
+            display: none;
+            position: fixed;
+            inset: 0;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.8);
+            z-index: 1;
+        }
+
+        .popup-matematika-soal-10.aktif {
+            display: flex;
+        }
+
+        .papan-skor {
+            display: none;
+            position: fixed;
+            inset: 0;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.8);
+            z-index: 1;
+        }
+
+        .papan-skor.aktif {
+            display: flex;
+        }
+
+        .popup-box-soal {
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            border: 1px solid white;
+            width: 70%;
+            max-width: 800px;
+            height: auto;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .soal {
+            display: flex;
+            margin: 30px 80px;
+        }
+
+        .nilai {
+            display: flex;
+            color: white;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .keterangan {
+            display: flex;
+            justify-content: center;
+            color: limegreen;
+            font-weight: bold;
+        }
         
+        .options-soal {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin: 20px 80px;
+        }
+
+        .option-soal-btn {
+            display: flex;
+            justify-content: space-between;
+            color: var(--secondary-color);
+            background-color: var(--primary-color);
+            font-size: medium;
+            font-weight: bold;
+            border: 2px solid var(--secondary-color);
+            padding: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+        }
+
+        .option-soal-btn:hover {
+            transform: translateY(-4px);
+        }
+
+        .option-soal-btn.benar {
+            background-color: rgb(0, 146, 0);
+        }
+
+        .option-soal-btn.salah {
+            background-color: rgb(192, 29, 0);
+        }
+
+        .tunggu {
+            display: none;
+            margin-top: 10px;
+            margin-bottom: 0;
+            color: white;
+            font-weight: bold;
+        }
+
+        .tunggu.aktif {
+            display: flex;
+        }

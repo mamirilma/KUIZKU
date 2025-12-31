@@ -5,69 +5,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mainkan Kuis</title>
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-
-        .kuis-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .kuis-1-img img {
-            width: 260px;
-            height: 160px;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: 0.15s;
-        }
-
-        .kuis-1-img img:hover {
-            color: grey;
-            opacity: 60%;
-        }
-
-        .kuis-1-judul {
-            color: white;
-            margin-top: 3px;
-            cursor: pointer;
-        }
-
-        .kuis-1-judul:hover {
-            text-decoration: underline;
-        }
-
-        .kuis-1-admin {
-            color: grey;
-            cursor: pointer;
-        }
-
-        .kuis-1-admin:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 <body>
     <img  class="bg-body" src="../asset/bg-body.png" alt="">
+
+    <!-- nav -->
     <nav class="nav-index">
         <a class="nav-isi" href="index.html">KUIZKU</a>
     </nav>
 
-    <a href="/data/soalmatimatika.json">
-        <div class="kuis-container" id="quizContainer">
+    <!-- kuis container -->
+    <div class="kuis-container">
         <div class="card-kuis-1">
             <div class="kuis-1-img">
                 <img src="../asset/matematika.webp" alt="">
             </div>
             <h3 class="kuis-1-judul">Matematika Dasar</h3>
-            <p class="kuis-1-admin">by Revinci.dev</p>
+        </div>
+        <p class="kuis-1-admin">by Revinci.dev</p>
+    </div>
+
+    <!-- popup matematika -->
+    <div class="popup-matematika">
+        <div class="popup-box">
+            <a href="main-kuis.html">
+                <span class="material-symbols-outlined icon-back">arrow_back</span>
+            </a>
+            <h1 class="judul-matematika">Matematika Dasar</h1>
+            <div class="info-kuis-matematika">
+                <p class="admin-name-info">by Revinci.dev</p>
+                <span class="material-symbols-outlined icon-book">book</span>
+                <p>10 Soal</p>
+            </div>
+            <button class="btnMulaiKuis">Mulai Kuis</button>
         </div>
     </div>
-    </a>
 
-    <h2 id="question"></h2>
-    <div id="options"></div>
+    <!-- popup matematika soal -->
+    <div class="popup-matematika-soal">
+        <div class="popup-box-soal">
+            <h1 class="soal">1. 12 + 8 = ...</h1>
+            <div class="options-soal">
+                <button class="option-soal-btn" data-jawaban="A">A. 20</button>
+                <button class="option-soal-btn">B. 21</button>
+                <button class="option-soal-btn">C. 22</button>
+                <button class="option-soal-btn">D. 23</button>
 
-    <script src="../javascript/index.js"></script>
-    <script src="../javascript/data.js"></script>
+                <p class="tunggu">Tunggu untuk ke soal berikutnya...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup matematika soal 2 -->
+    <div class="popup-matematika-soal-2">
+        <div class="popup-box-soal">
+            <h1 class="soal">2. 20 - 9 = ...</h1>
+            <div class="options-soal">
+                <button class="option-soal-btn">A. 9</button>
+                <button class="option-soal-btn">B. 10</button>
+                <button class="option-soal-btn" data-jawaban="C">C. 11</button>
+                <button class="option-soal-btn">D. 12</button>
+
+                <p class="tunggu">Tunggu untuk ke soal selanjutnya...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup matematika soal 3 -->
+    <div class="popup-matematika-soal-3">
+        <div class="popup-box-soal">
+            <h1 class="soal">3. 6 x 7 = ...</h1>
+            <div class="options-soal">
+                <button class="option-soal-btn">A. 36</button>
+                <button class="option-soal-btn">B. 40</button>
+                <button class="option-soal-btn" data-jawaban="C">C. 42</button>
+                <button class="option-soal-btn">D. 48</button>
+
+                <p class="tunggu">Tunggu untuk ke soal selanjutnya...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup matematika soal 4 -->
+    <div class="popup-matematika-soal-4">
+        <div class="popup-box-soal">
+            <h1 class="soal">4. 5^2 = ...</h1>
+            <div class="options-soal">
+                <button class="option-soal-btn" data-jawaban="A">A. 25</button>
+                <button class="option-soal-btn">B. 30</button>
+                <button class="option-soal-btn">C. 35</button>
+                <button class="option-soal-btn">D. 40</button>
+
+                <p class="tunggu">Tunggu untuk ke soal selanjutnya...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup matematika soal 5 -->
+    <div class="popup-matematika-soal-5">
+        <div class="popup-box-soal">
+            <h1 class="soal">5. 5 x 3 + 10 = ...</h1>
+            <div class="options-soal">
+                <button class="option-soal-btn">A. 20</button>
+                <button class="option-soal-btn" data-jawaban="B">B. 25</button>
+                <button class="option-soal-btn">C. 30</button>
+                <button class="option-soal-btn">D. 35</button>
+
+                <p class="tunggu">Tunggu untuk ke soal selanjutnya...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup matematika soal 6 -->
+    <div class="popup-matematika-soal-6">
+        <div class="popup-box-soal">
+            <h1 class="soal">6. 20 / 5 = ...</h1>
+            <div class="options-soal">
+                <button class="option-soal-btn">A. 1</button>
+                <button class="option-soal-btn">B. 2</button>
+                <button class="option-soal-btn">C. 3</button>
+                <button class="option-soal-btn" data-jawaban="D">D. 4</button>
+
+                <p class="tunggu">Tunggu untuk ke soal selanjutnya...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup matematika soal 7 -->
+    <div class="popup-matematika-soal-7">
+        <div class="popup-box-soal">
+            <h1 class="soal">7. (10 + 10) - (10 + 10) = ...</h1>
+            <div class="options-soal">
+                <button class="option-soal-btn" data-jawaban="A">A. 0</button>
+                <button class="option-soal-btn">B. 1</button>
+                <button class="option-soal-btn">C. 2</button>
+                <button class="option-soal-btn">D. 3</button>
+
+                <p class="tunggu">Tunggu untuk ke soal selanjutnya...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup matematika soal 8 -->
+    <div class="popup-matematika-soal-8">
+        <div class="popup-box-soal">
+            <h1 class="soal">8. 2^3 + 5 = ...</h1>
+            <div class="options-soal">
+                <button class="option-soal-btn">A. 12</button>
+                <button class="option-soal-btn" data-jawaban="B">B. 13</button>
+                <button class="option-soal-btn">C. 14</button>
+                <button class="option-soal-btn">D. 15</button>
+
+                <p class="tunggu">Tunggu untuk ke soal selanjutnya...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup matematika soal 9 -->
+    <div class="popup-matematika-soal-9">
+        <div class="popup-box-soal">
+            <h1 class="soal">9. 2 + 2 x 5 = ...</h1>
+            <div class="options-soal">
+                <button class="option-soal-btn">A. 10</button>
+                <button class="option-soal-btn">B. 11</button>
+                <button class="option-soal-btn" data-jawaban="C">C. 12</button>
+                <button class="option-soal-btn">D. 13</button>
+
+                <p class="tunggu">Tunggu untuk ke soal selanjutnya...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup matematika soal 10 -->
+    <div class="popup-matematika-soal-10">
+        <div class="popup-box-soal">
+            <h1 class="soal">10. 7 + 5 x 5 + 2 = ...</h1>
+            <div class="options-soal">
+                <button class="option-soal-btn">A. 31</button>
+                <button class="option-soal-btn">B. 32</button>
+                <button class="option-soal-btn">C. 33</button>
+                <button class="option-soal-btn" data-jawaban="D">D. 34</button>
+
+                <p class="tunggu">Tunggu untuk ke soal selanjutnya...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- papan skor -->
+     <div class="papan-skor">
+        <div class="popup-box-soal">
+            <a href="main-kuis.html">
+                <span class="material-symbols-outlined icon-back">arrow_back</span>
+            </a>
+            <h1 class="nilai"></h1>
+            <h2 class="keterangan"></h2>
+        </div>
+     </div>
+
+    <script src="../javascript/main.js"></script>
 </body>
 </html>
