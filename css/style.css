@@ -181,6 +181,10 @@
             z-index: 1;
         }
 
+        /* .popup-matematika.effect {
+            animation: popup-matematika-effect 0.5s ease-in-out;
+        } */
+
         .popup-matematika.aktif {
             display: flex;
         }
@@ -209,6 +213,22 @@
             font-size: 35px;
             cursor: pointer;
             transition: 0.15s;
+        }
+
+        .material-symbols-outlined.check-icon {
+            display: none;
+        }
+
+        .material-symbols-outlined.check-icon.benar {
+            display: flex;
+            font-weight: bold;
+            color: white
+        }
+
+        .material-symbols-outlined.check-icon.salah {
+            display: flex;
+            font-weight: bold;
+            color: white;
         }
 
         .centang {
@@ -491,6 +511,10 @@
 
         .option-soal-btn.salah {
             background-color: rgb(192, 29, 0);
+        }
+
+        .option-soal-btn.benar-2 {
+            background-color: #494949;
         }
 
         .tunggu {

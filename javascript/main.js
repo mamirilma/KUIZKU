@@ -46,7 +46,7 @@ const skorPerSoal = 10
 let indexSoal = 0
 
 cardKuis.addEventListener('click', () => {
-    cardPopup.classList.add('aktif')
+    cardPopup.classList.add('aktif', 'effect')
 })
 
 btnMulaiKuis.addEventListener('click', () => {
@@ -67,14 +67,21 @@ popups.forEach((popup, i) => {
             })
 
             btnOption.forEach(b => {
-                b.classList.remove('benar', 'salah')
+                b.classList.remove('benar', 'salah', 'benar-2')
+                const checkIcon = b.querySelector('.check-icon')
+                checkIcon.classList.remove('benar', 'salah')
             })
 
             if (btn.dataset.jawaban === jawaban[i]) {
                 btn.classList.add('benar')
+                const checkIcon = btn.querySelector('.check-icon')
+                checkIcon.classList.add('benar')
                 skor += skorPerSoal
             } else {
                 btn.classList.add('salah')
+                const checkIcon = btn.querySelector('.check-icon')
+                checkIcon.classList.add('salah')
+                btn.classList.add('benar-2')
             }
 
             tunggu.classList.add('aktif')
